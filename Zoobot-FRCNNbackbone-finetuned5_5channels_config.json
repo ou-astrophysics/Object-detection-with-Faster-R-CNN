@@ -1,0 +1,35 @@
+{
+    "model_name": "Zoobot-FRCNNbackbone-finetuned5_5channels",
+    "model_type": "FRCNN-Zoobot",
+    "trainable_layers": 5,
+    "description": "5-channel ResNet50 initialised with weights from FRCNN-Zoobot, last 4 blocks and initial convolution layer are made trainable",
+    "log_dir": "./models/Zoobot-FRCNNbackbone-finetuned5_5channels/",
+    "pretrained_ckpt": "./pretrained_models/Zoobot-backbone-finetuned_5channel.pth",
+    "data_table": "./data/HSC_crossmatch_model_training_5channel.gzip",
+    "image_dir": "./data/train_images_singleband/",
+    "batch_size": 16,
+    "num_classes": 6,
+    "epochs": 150,
+    "channels": 5,
+    "bands": "IRGZY",
+    "image_mean":
+    [
+        0.1752493,
+        0.20197728,
+        0.216239,
+        0.23456442,
+        0.25831807
+    ],
+    "image_std":
+    [
+        0.15935956,
+        0.18195586,
+        0.19402547,
+        0.20103182,
+        0.2069739
+    ],
+    "k_folds": 0,
+    "validation_split": 0.2,
+    "test_split": 0.0,
+    "final_model_ckpt": "Zoobot-FRCNNbackbone-finetuned5_5channels_FRCNN_epoch_58.pth"
+}
