@@ -1,4 +1,15 @@
 # Object-detection-with-Faster-R-CNN
+To train the model use `python ./train_Faster_RCNN_5channel.py --config Zoobot-backbone-finetuned5_5channels_config.json`
+
+A dataframe with ids, label and bounding box coordinates should look like
+| local_ids | label | x1 | y1 | x2 | y2 | train_group |
+| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+| 42072425889816590 | 3 | 132.237262 | 249.967300 | 152.416707 | 270.255904 | training |
+
+The column names are currently fixed and are expected from the dataset class. `train_group` should have either `training` or `validation` as values.
+
+The images should be named with the `local_ids` and a suffix for the filterband, e.g. `42072425889816590_Z.png` and stored in a directory referred to in the config file.
+
 Most things are setup via a config-file, e.g. `Zoobot-backbone-finetuned5_5channels_config.json`:
 ```javascript
 {
