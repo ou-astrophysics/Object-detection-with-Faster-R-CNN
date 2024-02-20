@@ -14,6 +14,7 @@ The images should be named with the `local_ids` and a suffix for the filterband,
 * `42072425889816590_I.png`
 * `42072425889816590_Z.png`
 * `42072425889816590_Y.png`
+
 and stored in a directory referred to in the config file. 
 
 Most things are setup via a config-file, e.g. `Zoobot-backbone-finetuned5_5channels_config.json`:
